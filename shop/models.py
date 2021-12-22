@@ -9,6 +9,7 @@ class Item(models.Model):
 	price = models.FloatField()
 	description = models.TextField()
 	image = models.FileField(upload_to='pictures')
+	
 
 	def __str__(self):
 		return self.title
