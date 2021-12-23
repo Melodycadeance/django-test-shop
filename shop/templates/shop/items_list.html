@@ -4,8 +4,8 @@
     {% for item in items %}
         <article class="item">
             <img src={{ item.image }}></img>
-            <h2><a href="">{{ item.title }}</a></h2>
-            <p>{{ item.price }}</p>
+            <h2><a href="{% url 'item_detail' pk=item.pk %}">{{ item.title }}</a></h2>
+            <p>{{ item.price }} руб.</p>
         </article>
     {% endfor %}
 {% endblock %}
