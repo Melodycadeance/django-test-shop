@@ -3,7 +3,7 @@
 {% block content %}
     {% for item in items %}
         <article class="item">
-            <img class="product-image" src={{ item.image }} alt="Купить хуйню без регистрации и смс"></img>
+            <img class="product-image" src="pictures/{{ item.image }}" alt="Купить хуйню без регистрации и смс"></img>
             <h2><a href="{% url 'item_detail' pk=item.pk %}">{{ item.title }}</a></h2>
             <p>{{ item.price }} руб.</p>
         </article>
