@@ -10,6 +10,16 @@ class Item(models.Model):
 	price = models.FloatField()
 	description = models.TextField()
 	image = models.FileField(upload_to='pictures')
+	cat = models.CharField(max_length=200)
+
+	def __str__(self):
+		return self.title
+
+class Category(models.Model):
+	title = models.CharField(max_length=200)
+	parent = models.CharField(max_length=200, blank=True)
+	image = models.FileField(upload_to='pictures')
+
 
 
 	def __str__(self):
