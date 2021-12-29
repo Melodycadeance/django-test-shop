@@ -1,9 +1,11 @@
-{% extends 'shop/base.html' %}
+{% extends 'shop/base_for_details.html' %}
 
 {% block content %}
-    <article class="item">
+    <article class="product">
+    	<img class="product-details-image" src="{{ MEDIA_ROOT }}{{item.image.url}}" alt='Купить хуйню без регистрации и смс'></img>
         <h2>{{ item.title }}</h2>
         <p>{{ item.price }} руб.</p>
+        <p>Описание:</p>
         <p>{{ item.description|linebreaksbr }}</p>
     </article>
 {% endblock %}
