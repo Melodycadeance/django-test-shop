@@ -20,7 +20,5 @@ class Category(models.Model):
 	parent = models.CharField(max_length=200, blank=True)
 	image = models.FileField(upload_to='pictures')
 
-
-
 	def __str__(self):
 		return self.title
